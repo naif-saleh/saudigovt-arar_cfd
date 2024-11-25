@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<File>
+  <Version>2.1</Version>
+  <Variables>
+    <ArrayOfVariable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Variable>
+        <Name>nid</Name>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>otp</Name>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>rid</Name>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>nloop</Name>
+        <InitialValue>0</InitialValue>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>rloop</Name>
+        <InitialValue>0</InitialValue>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>oloop</Name>
+        <InitialValue>0</InitialValue>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>statusid</Name>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>departmentid</Name>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>counter</Name>
+        <InitialValue>0</InitialValue>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>otpCLoop</Name>
+        <InitialValue>0</InitialValue>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>rateTrue</Name>
+        <InitialValue>1</InitialValue>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>mobileNo</Name>
+        <ShowScopeProperty>true</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>otpError</Name>
+        <ShowScopeProperty>true</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+      <Variable>
+        <Name>response</Name>
+        <ShowScopeProperty>false</ShowScopeProperty>
+        <DebuggerVisible>true</DebuggerVisible>
+        <HelpText />
+      </Variable>
+    </ArrayOfVariable>
+  </Variables>
+  <Flows>
+    <MainFlow>
+      <ns0:MainFlow Description="Callflow execution path." DebugModeActive="False" x:Name="Main" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:TCX.CFD.Classes.Components;Assembly=3CX Call Flow Designer, Version=18.5.8.0, Culture=neutral, PublicKeyToken=7cb95a1a133e706e">
+        <ns0:LoopComponent Condition="LESS_THAN(callflow$.nloop,3)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="Loop2">
+          <ns0:UserInputComponent AcceptDtmfInput="True" FinalDigitTimeout="3" StopDigit="DigitPound" IsValidDigit_3="True" IsValidDigit_0="True" IsValidDigit_1="True" IsValidDigit_Pound="False" InvalidDigitPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_wrong_id.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" IsValidDigit_7="True" IsValidDigit_4="True" IsValidDigit_5="True" SubsequentPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_try_enter_id.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" IsValidDigit_2="True" InterDigitTimeout="3" IsValidDigit_6="True" MinDigits="10" InitialPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_new_enter_id.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" x:Name="getnationalid" MaxRetryCount="3" DebugModeActive="False" FirstDigitTimeout="10" MaxDigits="20" Tag="" IsValidDigit_8="True" IsValidDigit_9="True" IsValidDigit_Star="False" TimeoutPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_sorrr_didnt_enter_id.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;">
+            <ns0:ComponentBranch DisplayedText="Valid Input" Description="Execution path when the specified branch is activated." Tag="" DebugModeActive="False" x:Name="componentBranch1">
+              <ns0:VariableAssignmentComponent VariableName="callflow$.nid" Tag="" DebugModeActive="False" Expression="getnationalid.Buffer" x:Name="Assign_nationid" />
+              <ns0:WebInteractionComponent URI="&quot;https://tabuk.ecolor.com.sa/mock_server.php/api/checkRequestNationalNo&quot;" HttpRequestType="POST" Tag="" Timeout="30" HeaderList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfParameter xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;" Content="CONCATENATE(&quot;{\&quot;NationalNo\&quot;:&quot;,callflow$.nid,&quot;}&quot;)" DebugModeActive="False" ContentType="application/json" x:Name="NationNoResponse" />
+              <ns0:ConditionalComponent Tag="" DebugModeActive="False" x:Name="CreateCondition3">
+                <ns0:ConditionalComponentBranch Condition="EQUAL(NationNoResponse.ResponseContent,&quot;true&quot;)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch13">
+                  <ns0:VariableAssignmentComponent VariableName="callflow$.nloop" Tag="" DebugModeActive="False" Expression="3" x:Name="exitLoop" />
+                </ns0:ConditionalComponentBranch>
+                <ns0:ConditionalComponentBranch Condition="NOT_EQUAL(NationNoResponse.ResponseContent,&quot;true&quot;)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch14">
+                  <ns0:PromptPlaybackComponent Tag="" AcceptDtmfInput="True" DebugModeActive="False" PromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_record_didnt_find.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" x:Name="PromptPlayback3" />
+                  <ns0:IncrementVariableComponent VariableName="callflow$.nloop" Tag="" DebugModeActive="False" x:Name="IncrementVariable4" />
+                  <ns0:ConditionalComponent Tag="" DebugModeActive="False" x:Name="CreateCondition5">
+                    <ns0:ConditionalComponentBranch Condition="GREAT_THAN_OR_EQUAL(callflow$.nloop,3)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch12">
+                      <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="ExitCallflow6" />
+                    </ns0:ConditionalComponentBranch>
+                  </ns0:ConditionalComponent>
+                </ns0:ConditionalComponentBranch>
+              </ns0:ConditionalComponent>
+            </ns0:ComponentBranch>
+            <ns0:ComponentBranch DisplayedText="Invalid Input" Description="Execution path when the specified branch is activated." Tag="" DebugModeActive="False" x:Name="componentBranch2">
+              <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="endCall" />
+            </ns0:ComponentBranch>
+          </ns0:UserInputComponent>
+        </ns0:LoopComponent>
+        <ns0:LoopComponent Condition="LESS_THAN(callflow$.rloop,3)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="recordvalidNo">
+          <ns0:UserInputComponent AcceptDtmfInput="True" FinalDigitTimeout="3" StopDigit="DigitPound" IsValidDigit_3="True" IsValidDigit_0="True" IsValidDigit_1="True" IsValidDigit_Pound="False" InvalidDigitPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_wrong_record.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" IsValidDigit_7="True" IsValidDigit_4="True" IsValidDigit_5="True" SubsequentPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_try_enter_record.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" IsValidDigit_2="True" InterDigitTimeout="3" IsValidDigit_6="True" MinDigits="4" InitialPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_new_record_id.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" x:Name="getrecordid" MaxRetryCount="3" DebugModeActive="False" FirstDigitTimeout="10" MaxDigits="7" Tag="" IsValidDigit_8="True" IsValidDigit_9="True" IsValidDigit_Star="False" TimeoutPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_sorry_didnt_enter_record.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;">
+            <ns0:ComponentBranch DisplayedText="Valid Input" Description="Execution path when the specified branch is activated." Tag="" DebugModeActive="False" x:Name="componentBranch3">
+              <ns0:VariableAssignmentComponent VariableName="callflow$.rid" Tag="" DebugModeActive="False" Expression="getrecordid.Buffer" x:Name="Assign_recordid" />
+              <ns0:WebInteractionComponent URI="&quot;https://tabuk.ecolor.com.sa/mock_server.php/api/GetRequestInfo&quot;" HttpRequestType="POST" Tag="" Timeout="60" HeaderList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfParameter xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;" Content="CONCATENATE(&quot;{\&quot;NationalNo\&quot;:&quot;,callflow$.nid,&quot;,\&quot;RecordNo\&quot;:&quot;,callflow$.rid,&quot;}&quot;)" DebugModeActive="False" ContentType="application/json" x:Name="getRequestInfo" />
+              <ns0:VariableAssignmentComponent VariableName="callflow$.response" Tag="" DebugModeActive="False" Expression="getRequestInfo.ResponseContent" x:Name="AssignVariable1" />
+              <ns0:ExecuteCSharpCodeComponent ReturnsValue="True" Code="&#xA;   &#xD;&#xA;       if (GetDataResponse==&quot;null&quot;)&#xA;    &#xD;&#xA;    {&#xA;        &#xD;&#xA;          return 0;  // or handle as needed&#xA;  &#xD;&#xA;      }&#xA;&#xA;     &#xD;&#xA;&#xA;   &#xD;&#xA;       if ( HttpResponseMessage != 200)&#xA;    &#xD;&#xA;    {&#xA;        &#xD;&#xA;          return 0;  // or handle as needed&#xA;  &#xD;&#xA;      }&#xA;&#xA;   &#xD;&#xA;  &#xD;&#xA;    return 1;&#xD;&#xA;" ParameterList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfScriptParameter xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ScriptParameter&gt;&lt;Name&gt;GetDataResponse&lt;/Name&gt;&lt;Value&gt;getRequestInfo.ResponseContent&lt;/Value&gt;&lt;Type&gt;String&lt;/Type&gt;&lt;/ScriptParameter&gt;&lt;ScriptParameter&gt;&lt;Name&gt;HttpResponseMessage&lt;/Name&gt;&lt;Value&gt;getRequestInfo.ResponseStatusCode&lt;/Value&gt;&lt;Type&gt;Int32&lt;/Type&gt;&lt;/ScriptParameter&gt;&lt;/ArrayOfScriptParameter&gt;" MethodName="getResponseOTP" Tag="" DebugModeActive="False" x:Name="executeCSharpCodeComponent2" />
+              <ns0:JsonXmlParserComponent ResponseMappingsList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfResponseMapping xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;ResponseMapping&gt;&lt;Path&gt;StatusId&lt;/Path&gt;&lt;Variable&gt;callflow$.statusid&lt;/Variable&gt;&lt;/ResponseMapping&gt;&lt;ResponseMapping&gt;&lt;Path&gt;SoundMapId&lt;/Path&gt;&lt;Variable&gt;callflow$.departmentid&lt;/Variable&gt;&lt;/ResponseMapping&gt;&lt;/ArrayOfResponseMapping&gt;" Input="getRequestInfo.ResponseContent" Tag="" DebugModeActive="False" TextType="JSON" x:Name="jsonXmlParserComponent1" />
+              <ns0:ConditionalComponent Tag="" DebugModeActive="False" x:Name="CreateCondition1">
+                <ns0:ConditionalComponentBranch Condition="NOT_EQUAL(callflow$.statusid,&quot;&quot;)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch1">
+                  <ns0:PromptPlaybackComponent Tag="" AcceptDtmfInput="True" DebugModeActive="False" PromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;The Status of Ducument.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;Prompt xsi:type=&quot;DynamicAudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;CONCATENATE(&quot;StatusID&quot;,callflow$.statusid,&quot;.wav&quot;)&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;IN.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;Prompt xsi:type=&quot;DynamicAudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;CONCATENATE(&quot;DEP_ID&quot;,callflow$.departmentid,&quot;.wav&quot;)&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" x:Name="promptPlaybackComponent1" />
+                  <ns0:VariableAssignmentComponent VariableName="callflow$.rloop" Tag="" DebugModeActive="False" Expression="4" x:Name="variableAssignmentComponent1" />
+                </ns0:ConditionalComponentBranch>
+                <ns0:ConditionalComponentBranch Condition="" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch3">
+                  <ns0:PromptPlaybackComponent Tag="" AcceptDtmfInput="True" DebugModeActive="False" PromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_record_didnt_find.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" x:Name="PromptPlayback1" />
+                  <ns0:ConditionalComponent Tag="" DebugModeActive="False" x:Name="CreateCondition2">
+                    <ns0:ConditionalComponentBranch Condition="LESS_THAN(callflow$.rloop,3)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch5">
+                      <ns0:IncrementVariableComponent VariableName="callflow$.rloop" Tag="" DebugModeActive="False" x:Name="IncrementVariable1" />
+                    </ns0:ConditionalComponentBranch>
+                    <ns0:ConditionalComponentBranch Condition="" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch6">
+                      <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="exitCallflowComponent1" />
+                    </ns0:ConditionalComponentBranch>
+                  </ns0:ConditionalComponent>
+                </ns0:ConditionalComponentBranch>
+              </ns0:ConditionalComponent>
+            </ns0:ComponentBranch>
+            <ns0:ComponentBranch DisplayedText="Invalid Input" Description="Execution path when the specified branch is activated." Tag="" DebugModeActive="False" x:Name="componentBranch4">
+              <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="ExitCallflow5" />
+            </ns0:ComponentBranch>
+          </ns0:UserInputComponent>
+        </ns0:LoopComponent>
+        <ns0:ConditionalComponent Tag="" DebugModeActive="False" x:Name="checkGoEvaluationrNot">
+          <ns0:ConditionalComponentBranch Condition="EQUAL(callflow$.rloop,4)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch2">
+            <ns0:UserInputComponent AcceptDtmfInput="True" FinalDigitTimeout="6" StopDigit="DigitPound" IsValidDigit_3="False" IsValidDigit_0="False" IsValidDigit_1="True" IsValidDigit_Pound="False" InvalidDigitPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;Number Typed is invalid.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" IsValidDigit_7="False" IsValidDigit_4="False" IsValidDigit_5="False" SubsequentPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_rateing.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" IsValidDigit_2="True" InterDigitTimeout="5" IsValidDigit_6="False" MinDigits="1" InitialPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_rateing.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" x:Name="RateService" MaxRetryCount="3" DebugModeActive="False" FirstDigitTimeout="10" MaxDigits="1" Tag="" IsValidDigit_8="False" IsValidDigit_9="False" IsValidDigit_Star="False" TimeoutPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_retype_number.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;">
+              <ns0:ComponentBranch DisplayedText="Valid Input" Description="Execution path when the specified branch is activated." Tag="" DebugModeActive="False" x:Name="componentBranch7">
+                <ns0:PromptPlaybackComponent Tag="" AcceptDtmfInput="True" DebugModeActive="False" PromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_thanks_rating.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" x:Name="PromptPlayback2" />
+                <ns0:VariableAssignmentComponent VariableName="callflow$.mobileNo" Tag="" DebugModeActive="False" Expression="session.ani" x:Name="mobileNo" />
+                <ns0:LoggerComponent Tag="" DebugModeActive="False" Text="RateService.Buffer" Level="Info" x:Name="Logger1" />
+                <ns0:WebInteractionComponent URI="&quot;https://tabuk.ecolor.com.sa/mock_server.php/api/Evaluation&quot;" HttpRequestType="POST" Tag="" Timeout="30" HeaderList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfParameter xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Parameter&gt;&lt;Name /&gt;&lt;Value /&gt;&lt;/Parameter&gt;&lt;/ArrayOfParameter&gt;" Content="CONCATENATE(&quot;{\&quot;NationalNo\&quot;:&quot;,callflow$.nid,&quot;,\&quot;RecordNo\&quot;:&quot;,callflow$.rid,&quot;,\&quot;MobileNo\&quot;:&quot;,session.ani,&quot;,\&quot;Status\&quot;:\&quot;&quot;,EQUAL(RateService.Buffer,&quot;1&quot;),&quot;\&quot;}&quot;)" DebugModeActive="False" ContentType="application/json" x:Name="Evaluation" />
+                <ns0:ConditionalComponent Tag="" DebugModeActive="False" x:Name="conditionalComponent3">
+                  <ns0:ConditionalComponentBranch Condition="EQUAL(Evaluation.ResponseStatusCode,200)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch18">
+                    <ns0:LoggerComponent Tag="" DebugModeActive="False" Text="Evaluation.ResponseStatusCode" Level="Info" x:Name="loggerComponent2" />
+                  </ns0:ConditionalComponentBranch>
+                  <ns0:ConditionalComponentBranch Condition="" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch19">
+                    <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="exitCallflowComponent3" />
+                  </ns0:ConditionalComponentBranch>
+                </ns0:ConditionalComponent>
+                <ns0:MenuComponent AcceptDtmfInput="True" IsValidOption_Star="False" Timeout="5" x:Name="Menu1" SubsequentPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;" InvalidDigitPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;" IsValidOption_8="False" IsValidOption_9="True" IsValidOption_Pound="False" InitialPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_Press-9-Back-To-IVR(1).wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" Tag="" RepeatOption="None" IsValidOption_3="False" IsValidOption_0="False" IsValidOption_1="False" IsValidOption_6="False" IsValidOption_7="False" TimeoutPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;" IsValidOption_5="False" IsValidOption_2="False" DebugModeActive="False" MaxRetryCount="1" IsValidOption_4="False">
+                  <ns0:MenuComponentBranch Option="Option9" Description="Execution path when the specified option is selected by the user." Tag="" FriendlyName="" DebugModeActive="False" x:Name="menuComponentBranch1">
+                    <ns0:TransferComponent TransferToVoicemail="False" Destination="774" Tag="" DebugModeActive="False" DelayMilliseconds="500" x:Name="backToMainMenu" />
+                  </ns0:MenuComponentBranch>
+                  <ns0:MenuComponentBranch Option="TimeoutOrInvalidOption" Description="Execution path when the specified option is selected by the user." Tag="" FriendlyName="" DebugModeActive="False" x:Name="menuComponentBranch3">
+                    <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="ExitCallflow3" />
+                  </ns0:MenuComponentBranch>
+                </ns0:MenuComponent>
+              </ns0:ComponentBranch>
+              <ns0:ComponentBranch DisplayedText="Invalid Input" Description="Execution path when the specified branch is activated." Tag="" DebugModeActive="False" x:Name="componentBranch8">
+                <ns0:PromptPlaybackComponent Tag="" AcceptDtmfInput="True" DebugModeActive="False" PromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_thanks_rating.wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" x:Name="PromptPlayback6" />
+                <ns0:MenuComponent AcceptDtmfInput="True" IsValidOption_Star="False" Timeout="5" x:Name="menuComponent1" SubsequentPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;" InvalidDigitPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;" IsValidOption_8="False" IsValidOption_9="True" IsValidOption_Pound="False" InitialPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Prompt xsi:type=&quot;AudioFilePrompt&quot;&gt;&lt;AudioFileName&gt;converted_Press-9-Back-To-IVR(1).wav&lt;/AudioFileName&gt;&lt;/Prompt&gt;&lt;/ArrayOfPrompt&gt;" Tag="" RepeatOption="None" IsValidOption_3="False" IsValidOption_0="False" IsValidOption_1="False" IsValidOption_6="False" IsValidOption_7="False" TimeoutPromptList="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ArrayOfPrompt xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;" IsValidOption_5="False" IsValidOption_2="False" DebugModeActive="False" MaxRetryCount="1" IsValidOption_4="False">
+                  <ns0:MenuComponentBranch Option="Option9" Description="Execution path when the specified option is selected by the user." Tag="" FriendlyName="" DebugModeActive="False" x:Name="menuComponentBranch2">
+                    <ns0:TransferComponent TransferToVoicemail="False" Destination="774" Tag="" DebugModeActive="False" DelayMilliseconds="500" x:Name="transferComponent1" />
+                  </ns0:MenuComponentBranch>
+                  <ns0:MenuComponentBranch Option="TimeoutOrInvalidOption" Description="Execution path when the specified option is selected by the user." Tag="" FriendlyName="" DebugModeActive="False" x:Name="menuComponentBranch4">
+                    <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="exitCallflowComponent4" />
+                  </ns0:MenuComponentBranch>
+                </ns0:MenuComponent>
+              </ns0:ComponentBranch>
+            </ns0:UserInputComponent>
+          </ns0:ConditionalComponentBranch>
+          <ns0:ConditionalComponentBranch Condition="LESS_THAN_OR_EQUAL(callflow$.oloop,4)" Description="Execution path when the specified condition is met." Tag="" DebugModeActive="False" x:Name="conditionalComponentBranch4">
+            <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="ExitCallflow2" />
+          </ns0:ConditionalComponentBranch>
+        </ns0:ConditionalComponent>
+        <ns0:ExitCallflowComponent Tag="" DebugModeActive="False" x:Name="ExitCallflow1" />
+      </ns0:MainFlow>
+    </MainFlow>
+    <ErrorHandlerFlow>
+      <ns0:ErrorHandlerFlow Description="Execution path when an error ocurrs." DebugModeActive="False" x:Name="Main" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:TCX.CFD.Classes.Components;Assembly=3CX Call Flow Designer, Version=18.5.8.0, Culture=neutral, PublicKeyToken=7cb95a1a133e706e">
+        <ns0:IncrementVariableComponent VariableName="callflow$.nloop" Tag="" DebugModeActive="False" Enabled="False" x:Name="IncrementVariable1" />
+        <ns0:TransferComponent TransferToVoicemail="False" Destination="595" Enabled="False" Tag="" DebugModeActive="False" DelayMilliseconds="500" x:Name="Transfer1" />
+      </ns0:ErrorHandlerFlow>
+    </ErrorHandlerFlow>
+    <DisconnectHandlerFlow>
+      <ns0:DisconnectHandlerFlow Description="Execution path since the call gets disconnected." DebugModeActive="False" x:Name="Main" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:TCX.CFD.Classes.Components;Assembly=3CX Call Flow Designer, Version=18.5.8.0, Culture=neutral, PublicKeyToken=7cb95a1a133e706e" />
+    </DisconnectHandlerFlow>
+  </Flows>
+</File>

@@ -1,0 +1,10 @@
+ivrapi.tabuk.gov.sa/api/CheckRequestInfo
+
+
+/ivrapi.tabuk.gov.sa/api/GetRequestInfo
+
+
+593
+
+
+https://pbxisobucket.oss-ap-southeast-7.aliyuncs.com/debian-amd64-netinst-3cx.iso?Expires=1714642682&OSSAccessKeyId=TMP.3KgU1idbB45mPxfH17Qk3hyuQDxwHatxJbcpbuUqoJuqT6Zf4nVhEHnc2XPKvstZ2NwEfTiRj8MGjjPZiVj4Ptio5D2kzg&Signature=qsRg0VgS%2BYzFeC8hOaMFo1xe1ho%3D
